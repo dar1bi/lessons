@@ -125,7 +125,6 @@ body {
 
 .info-social-text,
 .info-tags-text {
-    color: #1E212C;
     font-weight: 700;
     line-height: 1.6;
 }
@@ -234,7 +233,6 @@ body {
 
 .squares {
     font-size: 0;
-    background: #787A80;
     border-radius: 50px 10px;
     margin-bottom: 50px;
     background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
