@@ -268,7 +268,7 @@ body {
 }
 
 .background-4 {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 100%,rgba(0,0,0,0) 100%), url('../img/background/desk.jpeg'), local;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 100%,rgba(0,0,0,0) 100%), url('../img/background/desk.jpeg') 0 0 no-repeat local;
     overflow: auto;
     height: 300px;
     color: #fff;
