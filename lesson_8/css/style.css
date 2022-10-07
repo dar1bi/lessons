@@ -356,12 +356,12 @@ body {
     display: block;
 }
 
-div:has(.button-states:target) .link-1 a,
-div:has(.first-child:target) .link-2 a,
-div:has(.first-type:target) .link-3 a,
-div:has(.nth-child:target) .link-4 a,
-div:has(.not:target) .link-5 a,
-div:has(.list-numbering:target) .link-6 a {
+.links:has( .button-states:target ) .link-1 a,
+.links:has( .first-child:target ) .link-2 a,
+.links:has( .first-type:target ) .link-3 a,
+.links:has( .nth-child:target ) .link-4 a,
+.links:has( .not:target ) .link-5 a,
+.links:has( .list-numbering:target ) .link-6 a {
     color: #fe3f39;
     text-decoration: underline;
 }
@@ -420,7 +420,7 @@ div:has(.list-numbering:target) .link-6 a {
     margin-bottom: 30px;
 }
 
-.links:has(.list-numbering:target) .link-6 {
+.links:has( .list-numbering:target ) .link-6 {
     margin-bottom: 30px;
 }
 
