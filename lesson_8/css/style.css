@@ -356,9 +356,9 @@ body {
     display: block;
 }
 
-.links:has(.button-states:target) .link-1 a,
-.links:has(.first-child:target) .link-2 a,
-.links:has(.first-type:target) .link-3 a,
+:has(.button-states:target) .link-1 a,
+:has(.first-child:target) .link-2 a,
+:has(.first-type:target) .link-3 a,
 .links:has(.nth-child:target) .link-4 a,
 .links:has(.not:target) .link-5 a,
 .links:has(.list-numbering:target) .link-6 a {
