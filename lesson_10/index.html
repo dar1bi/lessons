@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Урок 10. CSS: Методологія БЕМ</title>
+    </head>
+    <body>
+        <header class="header"></header>
+        <main class="main">
+            <div class="article">
+                <div class="article__container">
+                    <div class="article__head head">
+                        <div class="head__title">Article</div>
+                        <div class="head__subtitle">HR & Recruting</div>
+                    </div> 
+                    <div class="article__title title">
+                        HR statistics: job search,  interviews, hiring and recruiting
+                    </div>
+                    <div class="article__head-info head-info">
+                        <div class="head-info__left-side">
+                            <div class="head-info__data data">August 3, 2020</div>
+                            <div class="head-info__time time">4 min read</div>
+                        </div>
+                        <div class="head-info__right-side">
+                            <div class="head-info__socials socials">
+                                <div class="socials__title text-desc">Share:</div>
+                                <a href="#" class="socials__facebook"></a>
+                                <a href="#" class="socials__twitter"></a>
+                                <a href="#" class="socials__linkedin"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article__image">
+                        <img src="img/article/hr_statistics.jpeg" alt="HR statistics">
+                    </div>
+                    <div class="article__text text">
+                        <!-- Бачила коментарі від менторів, що кожен елемент повинен мати клас, але роблю по прикладу Жені для подальшого зручного використання верстки для CMS -->
+                        <div class="text__bold bold-content">
+                            <p>
+                                Vulputate vitae pellentesque scelerisque luctus consequat mattis pellentesque dui odio. Interdum aenean sit malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac euismod. 
+                            </p>
+                        </div>
+                        <div class="text__main main-content">
+                            <p>
+                                At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi varius viverra risus vel.
+                            </p>
+                            <p>
+                                Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed duis diam vehicula rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut aliquet velit pharetra, nisi nunc, non.
+                            </p>
+                        </div>
+                        <div class="text__quote quote-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus  facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in tot euismod vulputate etiam eros. Vel accumsan at elit neque, ipsum.
+                            </p>
+                        </div>
+                        <div class="text__main main-content">
+                            <p>
+                                Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat mattis. Vitae mus blandit in neque amet non fringilla blandit:
+                            </p>
+                            <ul class="main-content__list">
+                                <li>A fermentum in morbi pretium aliquam adipiscing donec tempus.</li>
+                                <li>Vulputate placerat amet pulvinar lorem nisl.</li>
+                                <li>Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.</li>
+                                <li>Etiam duis lobortis in fames ultrices commodo nibh.</li>
+                            </ul>
+                            <p>
+                                Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id nec sed leo. Nisi in ornare lectus eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae maecenas. Consectetur neque ut aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est justo, pharetra nibh risus. Facilisi at porttitor volutpat natoque proin amet, nulla. Vivamus ut lobortis sagittis curabitur tellus convallis eget netus vitae.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="article__bottom-info bottom-info">
+                        <div class="bottom-info__left-side">
+                            <div class="bottom-info__title text-desc">Tags:</div>
+                            <!-- Також для зручності додавання посилань (тегів) у адмінці CMS не роблю окремі класи для тегів А (якщо я все правильно зрозуміла) -->
+                            <div class="bottom-info__tags tags">
+                                <a href="#">#learning</a>
+                                <a href="#">#HR</a>
+                                <a href="#">#self-development</a>
+                            </div>
+                        </div>
+                        <div class="bottom-info__right-side">
+                            <div class="bottom-info__socials socials">
+                                <div class="socials__title text-desc">Share:</div>
+                                <a href="#" class="socials__facebook"></a>
+                                <a href="#" class="socials__twitter"></a>
+                                <a href="#" class="socials__linkedin"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about">
+                <div class="about__container">
+                    <div class="about__who-we who-we">
+                        <div class="who-we__image">
+                            <img src="img/about/who_we/image.jpg" alt="About us">
+                        </div>
+                        <div class="who-we__subtitle subtitle">Who we are</div>
+                        <div class="who-we__title title">Why Createx?</div>
+                        <!-- Цю конструкцію з текстом (списком) беру з попередньої статті, вона має йти в такому форматі -->
+                        <div class="who-we__main main-content">
+                            <ul class="main-content__list">
+                                <li>A fermentum in morbi pretium aliquam adipiscing donec tempus.</li>
+                                <li>Vulputate placerat amet pulvinar lorem nisl.</li>
+                                <li>Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.</li>
+                                <li>Etiam duis lobortis in fames ultrices commodo nibh.</li>
+                                <li>Tincidunt sagittis neque sem ac eget.</li>
+                                <li>Ultricies amet justo et eget quisque purus vulputate dapibus tortor.</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="who-we__button button button_red">More about us</a>
+                    </div>
+                    <div class="about__courses courses">
+                        <div class="courses__head">
+                            <div class="courses__subtitle subtitle">Ready to learn?</div>
+                            <div class="courses__title title">Featured Courses</div>
+                            <a href="#" class="courses__button button button_clear">View all courses</a>
+                        </div>
+                        <div class="courses__items">
+                            <div class="courses__item item">
+                                <div class="item__image">
+                                    <img src="img/about/courses/person_1.jpg" alt="Person">
+                                </div>
+                                <div class="item__tag item__tag_green">Marketing</div>
+                                <div class="item__title">The Ultimate Google Ads Training Course</div>
+                                <div class="item__price">$100</div>
+                                <div class="item__name">by Jerome Bell</div>
+                            </div>
+                            <div class="courses__item item">
+                                <div class="item__image">
+                                    <img src="img/about/courses/person_2.jpg" alt="Person">
+                                </div>
+                                <div class="item__tag item__tag_blue">Management</div>
+                                <div class="item__title">Prduct Management Fundamentals</div>
+                                <div class="item__price">$480</div>
+                                <div class="item__name">by Marvin McKinney</div>
+                            </div>
+                            <div class="courses__item item">
+                                <div class="item__image">
+                                    <img src="img/about/courses/person_3.jpg" alt="Person">
+                                </div>
+                                <div class="item__tag item__tag_orange">HR & Recruting</div>
+                                <div class="item__title">HR  Management and Analytics</div>
+                                <div class="item__price">$200</div>
+                                <div class="item__name">by Leslie Alexander Li</div>
+                            </div>
+                            <div class="courses__item item">
+                                <div class="item__image">
+                                    <img src="img/about/courses/person_4.jpg" alt="Person">
+                                </div>
+                                <div class="item__tag item__tag_green">Marketing</div>
+                                <div class="item__title">Brand Management & PR Communications</div>
+                                <div class="item__price">$530</div>
+                                <div class="item__name">by Kristin Watson</div>
+                            </div>
+                            <div class="courses__item item">
+                                <div class="item__image">
+                                    <img src="img/about/courses/person_5.jpg" alt="Person">
+                                </div>
+                                <div class="item__tag item__tag_blue">Management</div>
+                                <div class="item__title">Business Development Management</div>
+                                <div class="item__price">$400</div>
+                                <div class="item__name">by Dianne Russell</div>
+                            </div>
+                            <div class="courses__item item">
+                                <div class="item__image">
+                                    <img src="img/about/courses/person_6.jpg" alt="Person">
+                                </div>
+                                <div class="item__tag item__tag_pink">Design</div>
+                                <div class="item__title">Graphic Design Basic</div>
+                                <div class="item__price">$500</div>
+                                <div class="item__name">by Guy Hawkins</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__benefits benefits">
+                        <div class="benefits__head">
+                            <div class="benefits__subtitle subtitle">Ready to learn?</div>
+                            <div class="benefits__title title">Featured Courses</div>
+                        </div>
+                        <div class="benefits__tabs">
+                            <a href="#" class="benefits__tab tab tab_active">Experienced Tutors</a>
+                            <a href="#" class="benefits__tab tab">Feedback & Support</a>
+                            <a href="#" class="benefits__tab tab">24/7 Online Library</a>
+                            <a href="#" class="benefits__tab tab">Community</a>
+                        </div>
+                        <div class="benefits__small-title small-title">Only practicing tutors</div>
+                        <!-- Цю конструкцію з текстом беру з попередньої статті, вона має йти в такому форматі -->
+                        <div class="benefits__text text">
+                            <div class="text__main main-content">
+                                <p>
+                                    Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits__image">
+                            <img src="img/about/benefits/illustration.svg" alt="Benefits">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </body>
+</html>
