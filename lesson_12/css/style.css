@@ -41,31 +41,25 @@ body {
 	top: 200px;
 	left: 60px;
 }
-.car__background:hover .car__wheel-left,
-.car__background:hover .car__wheel-right {
+.car__background:hover .wheel {
     transform: rotate(-1440deg);
 }
-.car__wheel-left {
+.wheel {
 	border-radius: 50%;
 	background: #131313;
 	width: 161px;
 	height: 161px;
 	position: absolute;
     z-index: 50;
-    top: 330px;
-	left: 202px;
 	transition: all 5s ease 0s;
 }
+.car__wheel-left {
+    top: 330px;
+	left: 202px;
+}
 .car__wheel-right {
-	border-radius: 50%;
-	background: #131313;
-	width: 161px;
-	height: 161px;
-	position: absolute;
-    z-index: 50;
 	top: 330px;
 	left: 869px;
-	transition: all 5s ease 0s;
 }
 .wheel__circle-1 {
 	border-radius: 50%;
