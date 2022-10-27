@@ -185,16 +185,18 @@ body {
 	width: 161px;
 	height: 161px;
 }
-.car__headlights {
+.headlights {
 	background: #303030;
 	border-radius: 60% 40% 0% 100% / 100% 100% 0% 0%;
 	width: 83px;
 	height: 58px;
 	position: absolute;
     z-index: 60;
+	transform: skew(-50deg, 0deg) scale(0.7);
+}
+.car__headlights {
 	top: 317px;
 	left: 91px;
-	transform: skew(-50deg, 0deg) scale(0.7);
 }
 .headlights__block-1 {
 	background: #ff9100;
@@ -382,14 +384,16 @@ body {
 	left: 283px;
 }
 .car__mirror {
+	top: 255px;
+	left: 390px;
+}
+.mirror {
+	perspective: 40px;
 	width: 67px;
 	height: 61px;
 	position: absolute;
     z-index: 100;
-	top: 255px;
-	left: 390px;
 }
-
 .mirror__back-1 {
 	width: 67px;
 	height: 61px;
@@ -407,9 +411,6 @@ body {
 	position: absolute;
 	z-index: 106;
 	transform: scale(0.88, 0.5) translate(10px, -33px) skew(0deg, -5deg);
-}
-.mirror {
-	perspective: 40px;
 }
 .mirror__handle-1 {
 	width: 67px;
@@ -511,12 +512,14 @@ body {
 	left: 1021px;
 }
 .car__back-headlights {
+	top: 278px;
+	left: 1051px;
+}
+.back-headlights {
 	width: 47px;
 	height: 35px;
 	position: absolute;
     z-index: 60;
-	top: 278px;
-	left: 1051px;
 }
 .back-headlights__block-1 {
 	background: #f2504c;
