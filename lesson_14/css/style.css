@@ -220,6 +220,8 @@ body {
 
 .cards {
 	display: flex;
+	flex-wrap: wrap;
+	row-gap: 40px;
 	/* margin і padding робимо відступи між картками */
 	margin: 0px -20px;
 }
