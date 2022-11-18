@@ -1,0 +1,321 @@
+/* ------------- ПІДКЛЮЧЕННЯ ШРИФТІВ ------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* ------------- ОСНОВНІ СТИЛІ ------------- */
+
+body {
+    font-family: Lato, sans-serif;
+}
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 50px 20px;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+    max-width: 1230px;
+    margin: 0px auto;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+/* ======================================================= */
+
+.big-title {
+	font-size: 30px;
+	color: #095778;
+	text-align: center;
+	font-weight: 900;
+}
+.title {
+	color: #333;
+	font-size: 22px;
+	font-weight: 900;
+}
+.block__title:not(:last-child) {
+	margin-bottom: 15px;
+}
+.block__row {
+	border: 10px solid #6d9bc3;
+	background-color: #6d9bc3;
+	display: flex;
+
+	/* Така комбінація (+знизу) працює як display: flex; */
+	/* font-size: 0;
+	white-space: nowrap; */
+}
+.block__column {
+	/* Така комбінація (+зверху) працює як display: flex; */
+	/* display: inline-block; */
+
+	border: 5px solid #095778;
+}
+.block__item {
+	background-color: #a2a2d0;
+	padding: 30px;
+	font-weight: 700;
+	font-size: 28px;
+	text-align: center;
+	line-height: 1.5;
+}
+
+/* ======================================================= */
+
+.block__row_standard {
+	display: block;
+}
+.block_center {
+	text-align: center;
+}
+.title_left {
+	text-align: left;
+}
+.block__row_inline-flex {
+	display: inline-flex;
+}
+.block__row_end {
+	justify-content: flex-end;
+}
+.block__row_center {
+	justify-content: center;
+}
+.block__row_space-between {
+	justify-content: space-between;
+}
+.block__row_space-around {
+	justify-content: space-around;
+}
+.block__row_space-evenly {
+	justify-content: space-evenly;
+}
+.block__row_ai-start {
+	align-items: flex-start;
+}
+.block__row_ai-end {
+	align-items: flex-end;
+}
+.block__row_ai-center {
+	align-items: center;
+}
+.block__row_ai-baseline .block__column:nth-child(2) .block__item {
+	font-size: 40px;
+}
+.block__row_ai-baseline {
+	align-items: baseline;
+}
+.block__row_wrap {
+	flex-wrap: wrap;
+}
+.block__row_wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+.block__row_column-gap {
+	column-gap: 50px;
+}
+.block__row_row-gap {
+	align-items: start;
+	flex-direction: column;
+	row-gap: 50px;
+}
+
+/* ======================================================= */
+
+.block__row_align-self .block__column_1 {
+	align-self: flex-start;
+}
+.block__row_align-self .block__column_2 {
+	align-self: center;
+}
+.block__row_align-self .block__column_3 {
+	align-self: flex-end;
+}
+.block__row_order .block__column_1 {
+	order: 2;
+}
+.block__row_order .block__column_2 {
+	order: 3;
+}
+.block__row_order .block__column_3 {
+	order: 1;
+}
+.block__row_flex-basis-01 .block__column {
+	flex-basis: 400px;
+}
+.block__row_flex-basis-11 .block__column {
+	flex-basis: 400px;
+	flex-grow: 1;
+}
+.block__row_flex-basis-10 .block__column {
+	flex-basis: 400px;
+	flex-grow: 1;
+	flex-shrink: 0;
+
+	/* Короткий запис flex (flex-grow + flex-shrink + flex-basis) */
+	/* flex: 0 1 auto; */
+}
+
+/* ======================================================= */
+
+.block__row_row-reverse {
+	flex-direction: row-reverse;
+}
+.block__row_column {
+	flex-direction: column;
+}
+.block__row_fd-ai-jc {
+	height: 500px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.block__row_page {
+	flex-direction: column;
+	height: 700px;
+}
+.block__row_page .block__column_2 {
+	flex: 1 1 auto;
+}
+.block__row_column-reverse {
+	height: 500px;
+	flex-direction: column-reverse;
+}
+
+/* ======================================================= */
+
+.block__row_example-indents {
+	display: flex;
+	margin: 0 -10px;
+	background: initial;
+	border: initial;
+}
+.block__row_example-indents .block__column {
+	flex: 0 1 33.333%;
+	padding: 0px 10px;
+	background: initial;
+	border: initial;
+}
+
+.example-text {
+	font-size: 20px;
+	display: flex;
+	row-gap: 15px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.example-text__link {
+	text-decoration: underline;
+	color: blue;
+}
+
+.cards {
+	display: flex;
+	/* margin і padding робимо відступи між картками */
+	margin: 0px -20px;
+}
+.cards__block {
+	flex-basis: 33.333%;
+	padding: 0px 20px;
+}
+.cards__item {
+	background-color: #bf372b;
+	color: #fff;
+	padding: 20px;
+	/* Задаємо min-height щоб картки були однакової висоти */
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	/* Задаємо align-items щоб кнопку не розтягувало */
+	align-items: flex-start;
+}
+.cards__image img {
+	max-width: 100%;
+}
+.cards__text {
+	/* Дозволяємо блоку з текстом розтягнутися, щоб прибити кнопку до низу */
+	flex-grow: 1;
+}
+.cards__button {
+	background: #879451;
+	color: #000;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.block__link {
+	color: blue;
+	text-decoration: underline;
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+}
+.block__link::before{
+	content:"";
+	background-color: #555;
+	border-radius: 50%;
+	flex: 0 0 10px;
+	height: 10px;
+	/* Якщо ми будуємо псевдоелемент за допомогою flex та height - посилання буде некоректно відображатись */
+	/* Вирішити цю проблему допомагає додатковий width */
+	width: 10px;
+}
+
+.text-object {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+}
+.text-object__icon {
+	/* Якщо ми хочемо створити елемент певної ширини та висоти - то через те, що це flex-елемент, звичайні width та height можуть давати некоректний результат */
+	/* width: 100px; */
+	/* Тому використовуємо flex-basis для таких цілей */
+	flex: 0 0 100px;
+	height: 100px;
+	background-color: #555;
+
+	/* Ще можна вирішити цю проблему, заборонивши елементу зменшуватись (за допомогою flex-shrink) */
+	/* width: 100px;
+	flex-shrink: 0; */
+}
+
+.block__image-float {
+	max-width: 100px;
+	float: left;
+	margin-right: 10px;
+}
+
+.text-img {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.text-img__item {
+	display: flex;
+	gap: 20px;
+	background-color: #555;
+	padding: 20px;
+}
+.text-img__item:nth-child(even){
+	flex-direction: row-reverse;
+}
+.text-img__image img {
+	max-width: 100%;
+}
+.text-img__image {
+	flex: 0 0 300px;
+}
+.text-img__text {
+	color: #fff;
+	line-height: 1.3;
+}

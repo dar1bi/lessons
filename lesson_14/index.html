@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Урок 14. CSS: FLEX</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header"></header>
+            <main class="main">
+
+                <div class="main__big-title big-title">Властивості flex-контейнера</div>
+                
+                <div class="main__block block">
+                    <h2 class="block__title title">Звичайний вигляд (всі елементи display: block;)</h2>
+                    <div class="block__row block__row_standard">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="main__block block">
+                    <h2 class="block__title title">display: flex;</h2>
+                    <div class="block__row">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block block_center">
+                    <h2 class="block__title title title_left">display: inline-flex;</h2>
+                    <div class="block__row block__row_inline-flex">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">justify-content: flex-start; (за замовчуванням)</h2>
+                    <div class="block__row">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">justify-content: flex-end;</h2>
+                    <div class="block__row block__row_end">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">justify-content: center;</h2>
+                    <div class="block__row block__row_center">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">justify-content: space-between;</h2>
+                    <div class="block__row block__row_space-between">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">justify-content: space-around;</h2>
+                    <div class="block__row block__row_space-around">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">justify-content: space-evenly;</h2>
+                    <div class="block__row block__row_space-evenly">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">align-items: stretch; (за замовчуванням)</h2>
+                    <div class="block__row">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Вищий блок
+                            </div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">align-items: flex-start;</h2>
+                    <div class="block__row block__row_ai-start">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Вищий блок
+                            </div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">align-items: flex-end;</h2>
+                    <div class="block__row block__row_ai-end">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Вищий блок
+                            </div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">align-items: center;</h2>
+                    <div class="block__row block__row_ai-center">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Вищий блок
+                            </div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">align-items: baseline;</h2>
+                    <div class="block__row block__row_ai-baseline">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Вищий блок
+                            </div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-wrap: nowrap; (за замовчуванням)</h2>
+                    <div class="block__row">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-wrap: wrap;</h2>
+                    <div class="block__row block__row_wrap">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-wrap: wrap-reverse;</h2>
+                    <div class="block__row block__row_wrap-reverse">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">column-gap</h2>
+                    <div class="block__row block__row_column-gap">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">row-gap</h2>
+                    <div class="block__row block__row_row-gap">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="main__big-title big-title">Властивості flex-елементів</div>
+
+                <div class="main__block block">
+                    <h2 class="block__title title">align-self</h2>
+                    <div class="block__row block__row_align-self">
+                        <div class="block__column block__column_1">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column block__column_2">
+                            <div class="block__item">2 <br>
+                                Вищий блок</div>
+                        </div>
+                        <div class="block__column block__column_3">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-basis</h2>
+                    <div class="block__row block__row_flex-basis-01">
+                        <div class="block__column block__column_1">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column block__column_2">
+                            <div class="block__item">2 <br>
+                                Більш широкий блок</div>
+                        </div>
+                        <div class="block__column block__column_3">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-basis + flex-grow: 1</h2>
+                    <div class="block__row block__row_flex-basis-11">
+                        <div class="block__column block__column_1">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column block__column_2">
+                            <div class="block__item">2 <br>
+                                Більш широкий блок</div>
+                        </div>
+                        <div class="block__column block__column_3">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-basis + flex-grow: 1 + flex-shrink: 0</h2>
+                    <div class="block__row block__row_flex-basis-10">
+                        <div class="block__column block__column_1">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column block__column_2">
+                            <div class="block__item">2 <br>
+                                Більш широкий блок</div>
+                        </div>
+                        <div class="block__column block__column_3">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="main__big-title big-title">Властивість flex-direction</div>
+
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-direction: row; (за замовчуванням)</h2>
+                    <div class="block__row">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Більший блок</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-direction: row-reverse;</h2>
+                    <div class="block__row block__row_row-reverse">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Більший блок</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-direction: column;</h2>
+                    <div class="block__row block__row_column">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Більший блок</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-direction: column; + align-items: center; + justify-content: space-between;</h2>
+                    <div class="block__row block__row_fd-ai-jc">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2 <br>
+                                Більший блок</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">header + content + footer</h2>
+                    <div class="block__row block__row_page">
+                        <div class="block__column">
+                            <div class="block__item">header</div>
+                        </div>
+                        <div class="block__column block__column_2">
+                            <div class="block__item">content</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">footer</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="main__block block">
+                    <h2 class="block__title title">flex-direction: column-reverse;</h2>
+                    <div class="block__row block__row_column-reverse">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__big-title big-title">Приклади з уроку</div>
+                
+                <div class="main__block block">
+                    <h2 class="block__title title">Фішка з відступами</h2>
+                    <div class="block__row block__row_example-indents">
+                        <div class="block__column">
+                            <div class="block__item">1</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">2</div>
+                        </div>
+                        <div class="block__column">
+                            <div class="block__item">3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__block block">
+                    <h2 class="block__title title">Приклад з текстом (і посиланням)</h2>
+                    <div class="block__example-text example-text">
+                        <div class="example-text__title">Заголовок тексту</div>
+                        <a href="#" class="example-text__link">Посилання</a>
+                        <div class="example-text__content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio amet molestias eveniet ullam cupiditate temporibus quis pariatur repellat laborum et, ipsum expedita, nostrum, debitis sapiente eum eius. Dolorem, excepturi? Recusandae.
+                        </div>
+                    </div>
+                </div>
+                <div class="main__block block">
+                    <h2 class="block__title title">Приклад з картками</h2>
+                    <div class="block__example-cards cards">
+                        <div class="cards__block">
+                            <div class="cards__item">
+                                <div class="cards__image">
+                                    <img src="img/watermelon.jpg" alt="Watermelon">
+                                </div>
+                                <div class="cards__text">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente id architecto, blanditiis voluptates accusantium dignissimos facilis laudantium quis pariatur suscipit asperiores praesentium, ullam alias reiciendis maxime beatae itaque nesciunt quo.
+                                </div>
+                                <a href="#" class="cards__button">Button</a>
+                            </div>
+                        </div>
+                        <div class="cards__block">
+                            <div class="cards__item">
+                                <div class="cards__image">
+                                    <img src="img/watermelon.jpg" alt="Watermelon">
+                                </div>
+                                <div class="cards__text">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente id architecto, blanditiis voluptates accusantium dignissimos facilis laudantium quis pariatur suscipit asperiores praesentium, ullam alias reiciendis maxime beatae itaque nesciunt quo.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente id architecto, blanditiis voluptates accusantium dignissimos facilis laudantium quis pariatur suscipit asperiores praesentium, ullam alias reiciendis maxime beatae itaque nesciunt quo.
+                                </div>
+                                <a href="#" class="cards__button">Button</a>
+                            </div>
+                        </div>
+                        <div class="cards__block">
+                            <div class="cards__item">
+                                <div class="cards__image">
+                                    <img src="img/watermelon.jpg" alt="Watermelon">
+                                </div>
+                                <div class="cards__text">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente id architecto, blanditiis voluptates accusantium dignissimos facilis laudantium quis pariatur suscipit asperiores praesentium, ullam alias reiciendis maxime beatae itaque nesciunt quo.
+                                </div>
+                                <a href="#" class="cards__button">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__block block">
+                    <h2 class="block__title title">Приклад з текстом та псевдоелементом (Приклад з width №1)</h2>
+                    <a href="" class="block__link">Приклад з текстом та псевдоелементом</a>
+                </div>
+                <div class="main__block block">
+                    <h2 class="block__title title">Приклад з текстом та обʼєктом (Приклад з width №2)</h2>
+                    <div class="block__example-text-object text-object">
+                        <div class="text-object__icon"></div>
+                        <div class="text-object__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eveniet incidunt id tempore ipsa explicabo, debitis minima saepe delectus totam animi iste, adipisci molestias asperiores, facere officia voluptatibus praesentium fuga!
+                        </div>
+                    </div>
+                </div>
+                <div class="main__block block">
+                    <h2 class="block__title title">Приклад з float </h2>
+                    <div class="block__example-float">
+                        <img class="block__image-float" src="img/watermelon.jpg" alt="Float image">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde in quod deleniti laudantium officiis facere ad alias accusantium iusto placeat ab, quas minima fugit! Id, eum. Dolores accusamus natus reiciendis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde in quod deleniti laudantium officiis facere ad alias accusantium iusto placeat ab, quas minima fugit! Id, eum. Dolores accusamus natus reiciendis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde in quod deleniti laudantium officiis facere ad alias accusantium iusto placeat ab, quas minima fugit! Id, eum. Dolores accusamus natus reiciendis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde in quod deleniti laudantium officiis facere ad alias accusantium iusto placeat ab, quas minima fugit! Id, eum. Dolores accusamus natus reiciendis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde in quod deleniti laudantium officiis facere ad alias accusantium iusto placeat ab, quas minima fugit! Id, eum. Dolores accusamus natus reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat modi similique, dolorum inventore error ea facilis cumque accusamus non nulla, vel officiis deserunt iste, natus dignissimos iure dolore nihil accusantium? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta atque quod eum officiis? Error optio, ex molestiae sit quia doloremque aperiam, pariatur vitae, consequatur deserunt enim commodi exercitationem modi saepe! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur aspernatur labore aut fuga illum quibusdam eius incidunt eaque voluptatem repellendus! Iste a porro culpa illum sequi cum. Laboriosam, illum quisquam.
+                    </div>
+                </div>
+                <div class="main__block block">
+                    <h2 class="block__title title">Приклад з текст-картинка - зміна порядку через один</h2>
+                    <div class="block__example-text-img text-img">
+                        <div class="text-img__item">
+							<div class="text-img__image">
+								<img src="img/watermelon.jpg" alt="Image">
+							</div>
+							<div class="text-img__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla itaque id unde, facilis provident maxime voluptatem veritatis commodi omnis voluptate fugiat deserunt at, molestiae voluptas nihil culpa qui earum. Iste! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque aliquam suscipit ratione, modi odio quis. Nesciunt laboriosam ex labore dolor, perspiciatis iure eligendi quos, culpa nostrum quia exercitationem odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quaerat, officia laudantium voluptatem harum numquam, asperiores et facilis iure minima excepturi suscipit aut fugit accusamus ea sunt consequatur vel voluptatibus.
+							</div>
+						</div>
+                        <div class="text-img__item">
+							<div class="text-img__image">
+								<img src="img/watermelon.jpg" alt="Image">
+							</div>
+							<div class="text-img__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla itaque id unde, facilis provident maxime voluptatem veritatis commodi omnis voluptate fugiat deserunt at, molestiae voluptas nihil culpa qui earum. Iste! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque aliquam suscipit ratione, modi odio quis. Nesciunt laboriosam ex labore dolor, perspiciatis iure eligendi quos, culpa nostrum quia exercitationem odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quaerat, officia laudantium voluptatem harum numquam, asperiores et facilis iure minima excepturi suscipit aut fugit accusamus ea sunt consequatur vel voluptatibus.
+							</div>
+						</div>
+                        <div class="text-img__item">
+							<div class="text-img__image">
+								<img src="img/watermelon.jpg" alt="Image">
+							</div>
+							<div class="text-img__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla itaque id unde, facilis provident maxime voluptatem veritatis commodi omnis voluptate fugiat deserunt at, molestiae voluptas nihil culpa qui earum. Iste! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque aliquam suscipit ratione, modi odio quis. Nesciunt laboriosam ex labore dolor, perspiciatis iure eligendi quos, culpa nostrum quia exercitationem odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quaerat, officia laudantium voluptatem harum numquam, asperiores et facilis iure minima excepturi suscipit aut fugit accusamus ea sunt consequatur vel voluptatibus.
+							</div>
+						</div>
+                        <div class="text-img__item">
+							<div class="text-img__image">
+								<img src="img/watermelon.jpg" alt="Image">
+							</div>
+							<div class="text-img__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla itaque id unde, facilis provident maxime voluptatem veritatis commodi omnis voluptate fugiat deserunt at, molestiae voluptas nihil culpa qui earum. Iste! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eaque aliquam suscipit ratione, modi odio quis. Nesciunt laboriosam ex labore dolor, perspiciatis iure eligendi quos, culpa nostrum quia exercitationem odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quaerat, officia laudantium voluptatem harum numquam, asperiores et facilis iure minima excepturi suscipit aut fugit accusamus ea sunt consequatur vel voluptatibus.
+							</div>
+						</div>
+                    </div>
+                </div>
+
+            </main>
+            <footer class="footer"></footer>
+        </div>
+    </body>
+</html>
