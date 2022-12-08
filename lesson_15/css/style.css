@@ -1,0 +1,316 @@
+/* ------------- ПІДКЛЮЧЕННЯ ШРИФТІВ ------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* ------------- ОСНОВНІ СТИЛІ ------------- */
+
+body {
+    font-family: Lato, sans-serif;
+	color: #424551;
+}
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+    max-width: 1260px;
+    margin: 0px auto;
+	padding: 0px 15px;
+}
+
+/* ======================================================= */
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 0px;
+	z-index: 99;
+	background: rgba(255, 255, 255, 0.7);
+}
+.header__container {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+.header__menu {
+	flex-grow: 1;
+}
+.menu__items {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 40px;
+	row-gap: 10px;
+}
+.menu__link {
+	font-weight: 700;
+}
+.menu__link:hover {
+	text-decoration: underline;
+}
+.actions {
+	display: flex;
+	align-items: center;
+	gap: 36px;
+	flex-shrink: 0;
+	/* flex-wrap: wrap; */
+}
+.actions__auth {
+	background: url('../img/icons/user.svg') no-repeat left;
+	padding-left: 28px;
+	font-weight: 700;
+	line-height: 1.125;
+}
+.actions__auth:hover {
+	text-decoration: underline;
+}
+
+/* ======================================================= */
+
+.main__head-block:not(:last-child) {
+	/* margin-bottom: 180px; */
+}
+.head-block {
+	padding: 200px 0px 80px 0px;
+	background: linear-gradient(55.95deg, rgba(255, 63, 56, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+
+	/* Для декору */
+	position: relative;
+}
+.head-block__container {
+	/* Щоб контент перекривав декор */
+	position: relative;
+    z-index: 2;
+}
+.head-block__center-block {
+	margin-bottom: 190px;
+}
+.center-block {
+	display: flex;
+}
+.center-block__content {
+	flex: 0 1 50%;
+	padding-right: 30px;
+	align-self: center;
+}
+.center-block__play:not(:last-child) {
+	margin-bottom: 40px;
+}
+.center-block__play {
+	color: #1E212C;
+	font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+.center-block__play::before {
+	content: "";
+	flex: 0 0 52px;
+	width: 52px;
+	height: 52px;
+	background: #FF3F3A url('../img/icons/play.svg') 22px 19px no-repeat;
+	border-radius: 50%;
+	transition: all 0.4s ease 0s;
+}
+.center-block__play::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background: #FF3F3A;
+	opacity: 0.12;
+	transform: scale(1.6);
+	transition: all 0.4s ease 0s;
+}
+.center-block__play:hover::before {
+	transform: scale(0.9);
+}
+.center-block__play:hover::after {
+	transform: scale(1.7);
+}
+.center-block__title:not(:last-child) {
+	margin-bottom: 60px;
+}
+.center-block__title {
+	font-weight: 900;
+	font-size: 64px;
+	color: #1E212C;
+	line-height: 1.3;
+	letter-spacing: 1px;
+}
+.center-block__actions:not(:last-child) {
+	margin-bottom: 60px;
+}
+.center-block__actions {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+.center-block__image {
+	flex: 0 1 50%;
+}
+.center-block__img {
+	/* Зсув зображення на відсоток від його ширини */
+	max-width: 107.8%;
+	transform: translate(7.8%,0px);
+}
+
+/* ======================================================= */
+
+.bottom-block {
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+
+	/* Відступи безпеки, щоб при зменшенні відстані між об'єктами вони не прилипали один до одного */
+	gap: 20px;
+}
+.bottom-block__circle {
+	border-radius: 50%;
+    flex: 0 0 8px;
+	/* width: 8px; */
+    height: 8px;
+    background: #FF3F3A;
+}
+.bottom-block__item {
+	display: flex;
+	color: #1E212C;
+	align-items: center;
+    gap: 12px;
+}
+.bottom-block__value {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 1.3;
+}
+.bottom-block__text {
+	line-height: 1.6;
+}
+
+/* ======================================================= */
+
+.decor {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.decor__item {
+	position: absolute;
+}
+.decor__item_1 {
+	background: url('../img/decor/decor_1.svg') 0 0 no-repeat;
+    width: 96px;
+    height: 96px;
+    top: 12.3%;
+    left: 4.3%;
+}
+.decor__item_2 {
+	background: url('../img/decor/decor_2.svg') 0 0 no-repeat;
+    width: 284px;
+    height: 284px;
+    left: -5.8%;
+	bottom: -9.3%;
+}
+.decor__item_3 {
+	background: url('../img/decor/decor_3.svg') 0 0 no-repeat;
+    width: 88px;
+    height: 47px;
+    top: 45.1%;
+    left: 40.7%;
+}
+.decor__item_4 {
+	background: url('../img/decor/decor_4.svg') 0 0 no-repeat;
+    width: 61px;
+    height: 61px;
+	left: 38.2%;
+    bottom: 24.2%;
+}
+.decor__item_5 {
+	background: url('../img/decor/decor_1.svg') 0 0 no-repeat;
+    width: 96px;
+    height: 96px;
+    top: -1.8%;
+    right: 6.8%;
+    transform: rotate(135deg);
+}
+.decor__item_6 {
+	background: url('../img/decor/decor_5.svg') 0 0 no-repeat;
+    width: 187px;
+    height: 137px;
+    bottom: 18%;
+    right: -1.6%;
+}
+
+/* ======================================================= */
+
+.main__about-us {
+	padding: 180px 0px 120px 0px;
+}
+.about-us {
+	/* Для декору */
+	position: relative;
+}
+.about-us__container {
+	/* Щоб контент перекривав декор */
+	position: relative;
+    z-index: 2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    column-gap: 30px;
+	row-gap: 150px;
+}
+.about-us__image {
+	flex: 0 1 705px;
+}
+.image-about__img {
+	max-width: 705px;
+}
+.about-us__content {
+	flex: 0 1 390px;
+	min-width: 300px;
+}
+.content-about__subtitle:not(:last-child) {
+	margin-bottom: 8px;
+}
+.content-about__title:not(:last-child) {
+	margin-bottom: 40px;
+}
+.content-about__list:not(:last-child) {
+	margin-bottom: 48px;	
+}
+.content-about__button:not(:last-child) {
+	margin-bottom: 50px;
+}
+
+/* ======================================================= */
+
+.decor__item_7 {
+	background: url('../img/decor/decor_6.svg') 0 0 no-repeat;
+    width: 216px;
+    height: 225px;
+    top: 27.9%;
+    left: -5.8%;
+}
+.decor__item_8 {
+	background: url('../img/decor/decor_7.svg') 0 0 no-repeat;
+    width: 287px;
+    height: 287px;
+    top: 50.8%;
+    right: -8.6%;
+}
