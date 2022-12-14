@@ -1,0 +1,170 @@
+/* ------------- ПІДКЛЮЧЕННЯ ШРИФТІВ ------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* ------------- ОСНОВНІ СТИЛІ ------------- */
+
+body {
+    font-family: Lato, sans-serif;
+	color: #424551;
+}
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+    max-width: 1260px;
+    margin: 0px auto;
+	padding: 0px 15px;
+}
+
+/* ======================================================= */
+
+.main__form-questions {
+	padding: 100px 0px;
+}
+.form-questions__container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	column-gap: 30px;
+    row-gap: 100px;
+	align-items: center;
+}
+.form-questions__image {
+	flex: 0 1 435px;
+}
+.form-questions__img {
+	max-width: 103.4%;
+    transform: translate(-3.4%,0px);
+}
+.form-questions__content {
+	flex: 0 1 705px;
+}
+.form-questions__subtitle:not(:last-child) {
+	margin-bottom: 8px;
+}
+.form-questions__title:not(:last-child) {
+	margin-bottom: 40px;
+}
+.main-form {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -12.5px;
+	row-gap: 24px;
+}
+.main-form__item_short {
+	flex: 0 1 50%;
+}
+.main-form__item_long {
+	flex: 0 1 100%;
+}
+.main-form__item {
+	padding: 0 12.5px;
+}
+.main-form__label {
+	line-height: 1.6;
+	display: inline-block;
+}
+.main-form__label:not(:last-child) {
+	margin-bottom: 8px;
+}
+.main-form__input::placeholder {
+	color: #9A9CA5;
+	line-height: 1.6;
+}
+.main-form__input {
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	padding: 0px 16px;
+	height: 52px;
+}
+.main-form__textarea {
+	width: 100%;
+	resize: vertical;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	padding: 13px 16px;
+	height: 128px;
+}
+.main-form__textarea::placeholder {
+	color: #9A9CA5;
+	line-height: 1.6;
+}
+.red-checkbox,
+.red-radio {
+	position: relative;
+}
+.red-checkbox__input,
+.red-radio__input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.red-checkbox__input:checked + .red-checkbox__label::before {
+	background:#FF3F3A url('../img/icons/check.svg') center / 60% no-repeat;
+	border: 1px solid #FF3F3A;
+}
+.red-radio__input:checked + .red-radio__label::before {
+	background: #FF3F3A;
+    border: 3px solid #FFF;
+	outline: 1px solid #FF3F3A;
+}
+.red-checkbox__label,
+.red-radio__label {
+	cursor: pointer;
+	display: inline-flex;
+	gap: 12px;
+}
+.red-checkbox__label::before {
+	content:"";
+	flex: 0 0 16px;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #B3B7BC;
+	border-radius: 3px;
+	margin-top: 5px;
+}
+.red-radio__label::before {
+	content:"";
+	flex: 0 0 16px;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #B3B7BC;
+	border-radius: 50%;
+}
+.red-checkbox__text,
+.red-radio__text {
+	line-height: 1.6;
+}
+.main-form__item_radio {
+	flex: 0 1 100%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+.main-form__radio-title {
+	line-height: 1.6;
+}
+.main-form__item:nth-last-child(3) {
+	margin-bottom: 24px;
+}
+.main-form__item_agree {
+	flex: 1 1 315px;
+	margin-right: 50px;
+}
+.main-form__item_button {
+	flex: 0 1 340px;
+}
+.main-form__button {
+	width: 100%;
+}
