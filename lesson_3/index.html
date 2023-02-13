@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Урок 3. CSS - Знайомство та синтаксис</title>
+    </head>
+    <body>
+        <header>
+            <div class="top-header"  id="top">
+                <p>
+                    Програма курсу:
+                    <a href="https://edu.fls.guru" target="_blank">Фрілансер по життю</a>
+                </p>
+            </div>
+            <h3>Навігація:</h3>
+            <ul class="navigation">
+                <li><a href="#class-desc" title="Посилання до опису про атрибут 'class'">Атрибут 'class'</a></li>
+                <li><a href="#id-desc" title="Посилання до опису про атрибут 'id'">Атрибут 'id'</a></li>
+                <li><a href="#other" title="Посилання до опису про додаткові атрибути">Додаткові атрибути</a></li>
+                <li><a href="#syntax" title="Посилання до опису про підключення css та його синтаксис">Підключення css та його синтаксис</a></li>
+                <li><a href="#selector" title="Посилання до опису про типи селекторів">Типи селекторів</a></li>
+                <li><a href="#combinations" title="Посилання до опису про комбінації селекторів">Комбінації селекторів</a></li>
+                <li><a href="#cascade" title="Посилання до опису про каскадність (вкладеність) селекторів">Каскадність (вкладеність) селекторів</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="top-title">
+                <h1>CSS: Знайомство та синтаксис</h1>
+                <h2>Конспект уроку №3 курсу "Фрілансер по життю"</h2>
+            </div>
+            <br>
+            <div class="attr-class" id="class-desc">
+                <h3>АТРИБУТ 'CLASS'</h3>
+                <div class="text">
+                    <p>
+                        Атрибут <span>'class'</span>, в основному, використовується для вказівки на клас в каскадній таблиці стилів (CSS). Тим не менш, він також може бути використаний в JavaScript (через HTML DOM), щоб внести зміни в HTML елемент з зазначеним класом.
+                    </p>
+                    <p>
+                        Атрибут <span>'class'</span> може мати безліч значень, розділених пробілом. Синтаксис атрибуту <span>'class'</span> має наступний вигляд:
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="img/class_desc/class_1.png" alt="Синтаксис атрибуту 'class'" title="Атрибут 'class'" width="800">
+                </div>
+                <h4>Правила написання імені класу:</h4>
+                <ol class="name-rules attention">
+                    <li>ім'я довільне, але логічне - описує цей об'єкт</li>
+                    <li>тільки латиниця (eng)</li>
+                    <li>тільки маленькі (прописні) літери</li>
+                    <li>пробіли у імені класу (коли в імені більше одного слова) замінюємо на "-" (дефіс)</li>
+                </ol>
+            </div>
+            <br>
+            <div class="attr-id" id="id-desc">
+                <h3>АТРИБУТ 'ID'</h3>
+                <div class="text">
+                    <p>
+                        Атрибут <span>'id'</span> задає ідентифікатор - унікальне ім'я елемента, яке використовується для зміни його стилю і звернення до нього через скрипти. Ідентифікатор в коді документа повинен бути в єдиному екземплярі, іншими словами, зустрічатися тільки один раз.
+                    </p>
+                    <p>
+                        Синтаксис атрибуту <span>'id'</span> має наступний вигляд:
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="img/id_desc/id_1.png" alt="Синтаксис атрибуту 'id'" title="Атрибут 'id'" width="800">
+                </div>
+                <h4>Правила написання імені ID:</h4>
+                <ol class="name-rules attention">
+                    <li>ім'я довільне, але логічне - описує цей об'єкт</li>
+                    <li>тільки латиниця (eng)</li>
+                    <li>тільки маленькі (прописні) літери</li>
+                    <li>пробіли у імені класу (коли в імені більше одного слова) замінюємо на "-" (дефіс)</li>
+                </ol>
+            </div>
+            <br>
+            <div class="attr-other" id="other">
+                <h3>ДОДАТКОВІ АТРИБУТИ</h3>
+                <div class="text">
+                    <p>
+                        Опишемо деякі інші додаткові атрибути, які часто використовуються в тегах:
+                    </p>
+                </div>
+                <ul class="attr-list">
+                    <li><span>title</span> - довільний текст підказки, яка з'являється при наведенні на об'єкт</li>
+                    <li><span>alt</span> - довільний текст (опис) зображення</li>
+                </ul>
+                <div class="text">
+                    <p>
+                        Також опишемо взаємодію HREF + ID. Для того, щоб зробити навігацію по сторінці, або за посиланням перейти на потрібний розділ сторінки, можна використати наступну конструкцію.
+                    </p>
+                    <p>
+                        Для початку задаємо ID блоку, на який ми хочемо зробити посилання:
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="img/other/other_1.png" alt="Створюємо ID для блоку, на який робимо посилання" title="ID для блоку" width="800">
+                </div>
+                <div class="text">
+                    <p>
+                        Тепер переходимо до самого посилання, через яке будемо потрапляти до цього блоку і задаємо значення атрибуту 'href' у форматі '#' + 'імʼя ID'. Тобто, в нашому випадку воно буде виглядати наступним чином:
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="img/other/other_2.png" alt="Задаємо href нашому посиланню" title="Задаємо href" width="800">
+                </div>
+                <div class="text">
+                    <p>
+                        Тепер, натискаючи на посилання "Наверх ^" (в прикладі), ми потрапляємо на відповідний блок сторінки з відповідним ID.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="css-syn" id="syntax">
+                <h3>ПІДКЛЮЧЕННЯ CSS ТА ЙОГО СИНТАКСИС</h3>
+                <div class="text">
+                    <p>
+                        Каскадні таблиці стилів (англ. Cascading Style Sheets) — спеціальна мова, що використовується для запису оформлення сторінок, написаних мовами розмітки даних. Концепція стилів працює так - текст спочатку виводиться, а потім форматується, за допомогою CSS стилів. Cтилі дають змогу розмежувати вміст веб сторінки від її оформлення.
+                    </p>
+                    <p>Існує 3 основних варіанти підключення каскадних таблиць стилів. А саме:</p>
+                    <p><span><b>1 варіант:</b> За допомогою тега STYLE</span></p>
+                </div>
+                <div class="image">
+                    <img src="img/syntax/syn_1.png" alt="Підключення стилів за допомогою тега style" title="Тег style" width="800">
+                </div>
+                <div class="text">
+                    <p><span><b>2 варіант:</b> За допомогою атрибуту STYLE</span></p>
+                </div>
+                <div class="image">
+                    <img src="img/syntax/syn_2.png" alt="Підключення стилів за допомогою атрибуту style" title="Атрибут style" width="800">
+                </div>
+                <div class="text">
+                    <p><span><b>3 варіант (Основний!):</b> Підключення окремого файлу</span></p>
+                </div>
+                <div class="image">
+                    <img src="img/syntax/syn_3.png" alt="Підключення стилів за допомогою окремого файлу" title="Підключаємо файл стилів" width="800">
+                </div>
+                <div class="text">
+                    <p>В заданому файлі, який ми створили та підключили, будемо прописувати всі наші стилі.</p>
+                </div>
+                <h4>Синтаксис CSS</h4>
+                <div class="text">
+                    <p><span><b>Селектор</b></span> - запит (пошук) елемента в HTML файлі, до якого підключений даний CSS-файл. Він має наступний вигляд:</p>
+                </div>
+                <div class="image">
+                    <img src="img/syntax/syn_4.png" alt="Селектор" title="Синтаксис селектору" width="800">
+                </div>
+                <div class="text">
+                    <p>В свою чергу, анатомія (синтаксис) CSS параметру наступна:</p>
+                </div>
+                <div class="image">
+                    <img src="img/syntax/syn_5.png" alt="CSS параметр" title="Синтаксис css параметру" width="800">
+                </div>
+            </div>
+            <br>
+            <div class="css-sel" id="selector">
+                <h3>ТИПИ СЕЛЕКТОРІВ</h3>
+                <div class="text">
+                    <p><b>Тип №1. Селектор тегу.</b> Шукаємо (робимо запит) по назві тегу. Приклад:</p>
+                </div>
+                <div class="image">
+                    <img src="img/selector/sel_1.png" alt="Селектор тегу" title="Селектор тегу" width="800">
+                </div>
+                <div class="text">
+                    <p><b>Тип №2. Селектор класу.</b> Шукаємо (робимо запит по назві класу). Спочатку КРАПКА потім ім'я класу. Приклад:</p>
+                </div>
+                <div class="image">
+                    <img src="img/selector/sel_2.png" alt="Селектор класу" title="Селектор класу" width="800">
+                </div>
+                <div class="text">
+                    <p><b>Тип №3. Селектор ID.</b> Шукаємо (робимо запит по назві ID). Спочатку # потім ім'я ID. Приклад:</p>
+                </div>
+                <div class="image">
+                    <img src="img/selector/sel_3.png" alt="Селектор ID" title="Селектор ID" width="800">
+                </div>
+                <div class="text">
+                    <p><b>Тип №4. Селектор зірочка (*).</b> Шукаємо (робимо запит) до всіх об'єктів. Приклад:</p>
+                </div>
+                <div class="image">
+                    <img src="img/selector/sel_4.png" alt="Селектор зірочка (*)" title="Селектор *" width="800">
+                </div>
+            </div>
+            <br>
+            <div class="css-comb" id="combinations">
+                <h3>КОМБІНАЦІЇ СЕЛЕКТОРІВ</h3>
+                <div class="text">
+                    <p>Розглянемо деякі комбінації селекторів, які будемо застосовувати:</p>
+                    <p><b>Комбінація 1:</b> Звертаємось одночасно до кількох класів або тегу з класом</p>
+                </div>
+                <div class="image">
+                    <img src="img/combinations/comb_1.png" alt="Одночасне звернення" title="Одночасне звернення до кількох класів або тегу з класом" width="800">
+                </div>
+                <div class="text">
+                    <p><b>Комбінація 2:</b> Звертаємось відразу до кількох класів</p>
+                </div>
+                <div class="image">
+                    <img src="img/combinations/comb_2.png" alt="Кілька звернень" title="Звернення відразу до кількох класів" width="800">
+                </div>
+            </div>
+            <br>
+            <div class="css-casc" id="cascade">
+                <h3>КАСКАДНІСТЬ (ВКЛАДЕНІСТЬ) СЕЛЕКТОРІВ</h3>
+                <div class="text next-text">
+                    <p>Розглянемо деякі варіанти каскадності (вкладеності), які будемо застосовувати:</p>
+                    <p><b>Варіант 1</b> (обовʼязково ставимо пробіл між елементами):</p>
+                </div>
+                <div class="image">
+                    <img src="img/cascade/casc_1.png" alt="Варіант каскадності №1" title="Варіант каскадності №1" width="800">
+                </div>
+                <div class="text">
+                    <p><b>Варіант 2:</b></p>
+                </div>
+                <div class="image">
+                    <img src="img/cascade/casc_2.png" alt="Варіант каскадності №2" title="Варіант каскадності №2" width="800">
+                </div>
+                <div class="text">
+                    <p><b>Варіант 3:</b></p>
+                </div>
+                <div class="image">
+                    <img src="img/cascade/casc_3.png" alt="Варіант каскадності №3" title="Варіант каскадності №3" width="800">
+                </div>
+                <div class="text">
+                    <p><b>Варіант 4:</b></p>
+                </div>
+                <div class="image">
+                    <img src="img/cascade/casc_4.png" alt="Варіант каскадності №4" title="Варіант каскадності №4" width="800">
+                </div>
+            </div>
+            <br>
+            <hr>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="top-page">
+                    <a href="#top" title="Піднятися наверх сторінки">Наверх ↑</a>
+                </div>
+                <p>
+                    "Живи, а працюй у вільний час!" - <a href="https://www.youtube.com/c/FreelancerLifeStyle" target="_blank">Жека Андріканич</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

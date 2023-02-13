@@ -1,0 +1,58 @@
+.text,
+ul,
+ol {
+    color: #000088;
+}
+
+h3 {
+    color: #000055;
+}
+
+h1,
+h2 {
+    color: #002200;
+}
+
+.attr-list span {
+    color: #004400;
+}
+
+.name-rules.attention {
+    color: #800000;
+}
+
+p > span {
+    color: #333300;
+}
+
+.navigation a,
+h4{
+    color: #000066;
+}
+
+.css-sel b{
+    color: #003300;
+}
+
+.css-comb > .text {
+    color: #003333;
+}
+
+.next-text>p + p,
+.next-text ~ .text {
+    color: #333333;
+}
+
+.top-header *,
+.footer * {
+ color: #3333cc;
+}
+
+.footer > .top-page > a{
+    color: #880000;
+}
+
+#class-desc > .text span,
+#id-desc > .text span{
+    color: red;
+} 
