@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Урок 4. CSS - Пріоритет селекторів. Підключення шрифтів</title>
+    </head>
+    <body>
+        <header>
+            <div class="top-header"  id="top">
+                <p>
+                    Програма курсу:
+                    <a href="https://edu.fls.guru" target="_blank" style="color: red;">Фрілансер по життю</a>
+                </p>
+            </div>
+            <br>
+            <h3>НАВІГАЦІЯ:</h3>
+            <ul class="navigation">
+                <li><a href="#sel-prior" title="Посилання до опису про пріоритет селекторів">Пріоритет селекторів</a></li>
+                <li><a href="#reset" title="Посилання до опису про обнулення стилів">Обнулення стилів</a></li>
+                <li><a href="#font" title="Посилання до опису про підключення шрифтів">Підключення шрифтів</a></li>
+                <li><a href="#g-font" title="Посилання до опису про Google Fonts">Google Fonts</a></li>
+                <li><a href="#s-font" title="Посилання до опису про самостійний пошук та підключення шрифту">Самостійний пошук та підключення шрифту</a></li>
+            </ul>
+            <br>
+        </header>
+        <main>
+            <div class="top-title">
+                <h1>CSS: ПРІОРИТЕТ СЕЛЕКТОРІВ, ОБНУЛЕННЯ СТИЛІВ. ШРИФТИ: ПІДКЛЮЧЕННЯ</h1>
+                <h2>Конспект уроку №4 курсу "Фрілансер по життю"</h2>
+            </div>
+            <br>
+            <div class="priority" id="sel-prior">
+                <h3>ПРІОРИТЕТ СЕЛЕКТОРІВ</h3>
+                <div class="text">
+                    <p>
+                        Каскадність CSS – це механізм, завдяки якому до елементу HTML-документа може застосовуватися більш ніж одне правило CSS. Правила можуть виходити з різних джерел: із зовнішньої та внутрішньої таблиці стилів, від механізму успадкування, від батьківських елементів, від класів та ID, від селектора тегу, від атрибуту style тощо. Оскільки в цих випадках часто відбувається конфлікт стилів, була створена система пріоритетів: зрештою застосовується той стиль, який походить від джерела з вищим пріоритетом.
+                    </p>
+                </div>
+                <div class="text-font">
+                    <p>
+                        <span>CSS</span> is designed to enable the separation of presentation and content, including layout, colors, and fonts.This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate <span class="medium">.css</span> file, which reduces complexity and repetition in the structural content; and enable the <span class="medium">.css</span> file to be cached to improve the page load speed between the pages that share the file and its formatting.
+                    </p>
+                </div>
+                <br>
+                <h4>Основні правила формування пріоритетів:</h4>
+                <ol class="priority-rules attention">
+                    <li><span>1 -</span> У випадку рівнозначних селекторів більший пріоритет буде у останнього по коду.</li>
+                    <li><span>2 -</span> Більший пріоритет завжди буде у селектора, який звужує (уточнює, конкретизує) пошук (запит).</li>
+                    <li><span>3 -</span> Пріоритет у рядкових (inline) стилів (атрибут style="") вищий ніж у стилів з окремого файлу (наприклад style.css).</li>
+                    <li><span>4 -</span> Позначка !important перезаписує пріоритет (не рекомендується).</li>
+                </ol>
+            </div>
+            <br>
+            <div class="style-reset" id="reset">
+                <h3>ОБНУЛЕННЯ СТИЛІВ</h3>
+                <div class="text">
+                    <p>
+                        Кожен браузер встановлює свої значення стилів за замовчуванням для різних HTML-елементів, нам їх і треба скинути, щоб сайти відображалися однаково у всіх браузерах.
+                    </p>
+                    <p>
+                        Для цього, під час створення нового проекту додаємо у нього спеціальний файл "reset.css", який здійснює повне обнулення CSS стилів і дозволяє нам творити з «чистого листа».
+                    </p>
+                    <p>Отже, застосуємо наступні стилі для обнулення (поділимо їх на категорії з невеликими поясненнями):</p>
+                </div>
+                <br>
+                <h4>Прибираємо всі відступи та рамки:</h4>
+                <div class="image">
+                    <img src="img/reset/1.png" alt="Обнулення стилів" title="Прибираємо всі відступи та рамки" width="500">
+                </div>
+                <h4>Прибираємо стилі списків:</h4>
+                <div class="image">
+                    <img src="img/reset/2.png" alt="Обнулення стилів" title="Прибираємо стилі списків" width="500">
+                </div>
+                <h4>Прибираємо стилі посилань:</h4>
+                <div class="image">
+                    <img src="img/reset/3.png" alt="Обнулення стилів" title="Прибираємо стилі посилань" width="500">
+                </div>
+                <h4>Прибираємо зайвий відступ у зображення:</h4>
+                <div class="image">
+                    <img src="img/reset/4.png" alt="Обнулення стилів" title="Прибираємо зайвий відступ у зображення" width="500">
+                </div>
+                <h4>Скидаємо стилі заголовків:</h4>
+                <div class="image">
+                    <img src="img/reset/5.png" alt="Обнулення стилів" title="Скидаємо стилі заголовків" width="500">
+                </div>
+                <h4>Прибираємо непотрібне в стилях тегів для форми:</h4>
+                <div class="image">
+                    <img src="img/reset/6.png" alt="Обнулення стилів" title="Прибираємо непотрібне в стилях тегів для форми" width="500">
+                </div>
+                <h4>Обнуляємо висоту рядка:</h4>
+                <div class="image">
+                    <img src="img/reset/7.png" alt="Обнулення стилів" title="Обнуляємо висоту рядка" width="500">
+                </div>
+            </div>
+            <br>
+            <div class="fonts" id="font">
+                <h3>ПІДКЛЮЧЕННЯ ШРИФТІВ</h3>
+                <div class="text">
+                    <p>
+                        Сімейство шрифтів - це шрифт, який застосовується до тексту. Кожен шрифт являє собою набір гліфів, кожен з яких являє собою окремий лист, номер, знак пунктуації або інший символ. Кожен шрифт має певну жирність, стиль, ширину, нахил.
+                    </p>
+                    <p>
+                        Хоча терміни "шрифт" і "сімейство шрифтів" мають дещо інше значення ("шрифт" більш точний, ніж "сімейство шрифтів"), вони часто використовуються разом в колах веб-дизайну і є рівнозначними один-одному.
+                    </p>
+                    <p>
+                        Більшість комп'ютерів мають вже попередньо встановлені з шрифти, однак, не треба очікувати, що комп'ютер користувача матиме всі потрібні Вам шрифти. Саме тому нам потрібно підключати шрифти, які використані у дизайні сайту. В ідеалі - дизайнер має сам додавати файли шрифтів. Але це буває не завжди, тому ми будемо підключати їх самостійно.
+                    </p>
+                </div>
+                <div class="options fonts-opt">
+                    <h4>Розбираємо 2 варіанти пошуку шрифтів:</h4>
+                    <ol class="categ-fonts attention">
+                        <li><span>1.</span> Підключення за допомогою <a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+                        <li><span>2.</span> Самостійний пошук в <a href="https://www.google.com/" target="_blank">Google</a> та самостійне завантаження/підключення</li>
+                    </ol>
+                </div>
+            </div>
+            <br>
+            <div class="google-fonts" id="g-font">
+                <h3>GOOGLE FONTS</h3>
+                <div class="text">
+                    <p>
+                        Для того, щоб підключити шрифт за допомогою сервісу <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>, робимо наступні кроки:
+                    </p>
+                </div>
+                <ul class="g-fonts-rules">
+                    <li>- Заходимо на посилання <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a> та шукаємо потрібний нам стиль, скориставшись формою пошуку "Search fonts".</li>
+                    <li>- Беремо (накидуємо) ті варіанти, які нам потрібні.</li>
+                    <li>- Потім вибираємо варіант підключення, який нам потрібен. А саме, їх існує 2:
+                        <ol>
+                            <li>1 - за допомогою тегу &lsaquo;link&rsaquo; (підключаємо його перед основними стилями в html файлі)</li>
+                            <li>2 - за допомогою @import в css файлі (додаємо на початок в основному файлі стилів)</li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="text">
+                    <p>
+                        Приклад підключення шрифту в css файлі:
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="img/fonts/google_fonts.png" alt="Підключення шрифтів" title="Підключаємо шрифт з Google Fonts" width="700">
+                </div>
+            </div>
+            <br>
+            <div class="search-fonts" id="s-font">
+                <h3>САМОСТІЙНИЙ ПОШУК ТА ПІДКЛЮЧЕННЯ ШРИФТУ</h3>
+                <div class="text">
+                    <p>
+                        Якщо на сервісі <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> ми не знаходимо потрібний нам шрифт, тоді ми шукаємо його самостійно в <a href="https://www.google.com/" target="_blank">Google</a>.
+                    </p>
+                </div>
+                <ul class="fonts-rules">
+                    <li>- Шукаємо всі потрібні нам варіанти шрифту АБО у форматах "woff" та "woff2" АБО тільки у форматі "ttf".</li>
+                    <li>- Зберігаємо всі файли у папці "fonts".</li>
+                    <li>- Якщо вдалося знайти лише у форматі "ttf", то конвертуємо його у файли "woff" та "woff2" за допомогою сервісу <a href="https://transfonter.org/" target="_blank">https://transfonter.org/</a>. Робимо це тому, що файли "woff" та "woff2" важать менше, ніж файл "ttf".</li>
+                    <li>- Підключаємо всі наші файли шрифтів в файлі основних стилів (на початку) в наступному вигляді (приклад):</li>
+                </ul>
+                <div class="image">
+                    <img src="img/fonts/fonts.png" alt="Підключення шрифтів" title="Підключаємо завантажені шрифти" width="700">
+                </div>
+            </div>
+            <br>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="top-page">
+                    <a href="#top" title="Піднятися наверх сторінки">Наверх ↑</a>
+                </div>
+                <p>
+                    "Живи, а працюй у вільний час!" - <a href="https://www.youtube.com/c/FreelancerLifeStyle" target="_blank">Жека Андріканич</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
