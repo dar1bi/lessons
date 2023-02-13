@@ -1,0 +1,269 @@
+/* ------------- ПІДКЛЮЧЕННЯ ШРИФТІВ ------------- */
+
+/*Підключаємо шрифт Roboto з Google Fonts (вибрала варіанти Regular та Bold)*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
+/*Підключаємо інші шрифти*/
+@font-face {
+	font-family: "LiberGrotesqueFamily";
+	src: url("../fonts/LiberGrotesqueFamily_Regular.woff2") format("woff2"), url("../fonts/LiberGrotesqueFamily_Regular.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "LiberGrotesqueFamily";
+	src: url("../fonts/LiberGrotesqueFamily_Oblique.woff2") format("woff2"), url("../fonts/LiberGrotesqueFamily_Oblique.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: oblique;
+}
+@font-face {
+	font-family: "LiberGrotesqueFamily";
+	src: url("../fonts/LiberGrotesqueFamily_Bold.woff2") format("woff2"), url("../fonts/LiberGrotesqueFamily_Bold.woff") format("woff");
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "LiberGrotesqueFamily";
+	src: url("../fonts/LiberGrotesqueFamily_BdObl.woff2") format("woff2"), url("../fonts/LiberGrotesqueFamily_BdObl.woff") format("woff");
+	font-display: swap;
+	font-weight: 700;
+	font-style: oblique;
+}
+@font-face {
+	font-family: "LiberGrotesqueFamily";
+	src: url("../fonts/LiberGrotesqueFamily_Black.woff2") format("woff2"), url("../fonts/LiberGrotesqueFamily_Black.woff") format("woff");
+	font-display: swap;
+	font-weight: 900;
+	font-style: normal;
+}
+
+/* ------------- ОСНОВНІ СТИЛІ ------------- */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 20px 30px;
+    /* white-space: nowrap; */
+}
+
+h1,
+h3 {
+    text-transform: uppercase;
+}
+
+h1,
+h2 {
+    font-weight: 900;
+    color: rgb(151,16,16);
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+
+h3 {
+    font-weight: 900;
+    color: #194309;
+    text-align: center;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+h2.subtitle {
+    font-style: oblique;
+}
+
+.navigation h3 {
+    margin-bottom: 10px;
+    text-align: right;
+    color: rgb(151,16,16);
+}
+
+.navigation ul li ul li{
+    font-style: italic;
+    color: #1c48b5;
+}
+
+.navigation > ul > li {
+    margin-bottom: 10px;
+    color: #ae982c;
+}
+
+.navigation,
+.top-header {
+    margin-bottom: 30px;
+    text-align: right;
+    color: rgb(151,16,16);
+    font-weight: 700;
+}
+
+.top-header a {
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.top-header {
+    font-size: 22px;
+}
+
+.block{
+    margin-bottom: 60px;
+}
+
+.block h3 {
+    margin-bottom: 20px;
+}
+
+.p-top {
+    margin-top: 10px;
+}
+
+.description > .property-name {
+    margin-bottom: 10px;
+}
+
+.property-name + p {
+    text-indent: 20px;
+}
+
+.property-name ~ p {
+    color: #333;
+}
+
+.description span {
+    font-weight: 700;
+}
+
+.description .name {
+    color: #1c48b5; 
+    font-weight: 900;
+}
+
+.description li span {
+    color: #ae982c;
+}
+
+.description ul {
+    margin: 10px 0px 0px 15px;
+}
+
+.description .underline {
+    text-decoration: underline;
+}
+
+.example h4 {
+    text-shadow: 3px 1px 10px #1b450e;
+    padding: 10px 0px 10px;
+}
+
+.example p {
+    color: #1b450e;
+}
+
+.property {
+    margin-bottom: 40px;
+}
+
+.color-word {
+    color: gold;
+}
+
+.color-hex {
+    color: #F12668;
+}
+
+.color-rgb {
+    color: rgb(72, 102, 157);
+}
+
+.color-rgba {
+    color: rgba(72, 102, 157, 0.45);
+}
+
+.color-hsl {
+    color: hsl(0, 100%, 30%);
+}
+
+.color-hsla {
+    color: hsla(0, 60%, 77%, 0.7);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.description span.l-th {
+    text-decoration: line-through;
+}
+
+.description span.ov-l {
+    text-decoration: overline;
+}
+
+.description span.und-l {
+    text-decoration: underline;
+}
+
+.description span.l-th,
+.description span.ov-l,
+.description span.und-l {
+    color: #333;
+    font-weight: 400;
+}
+
+span.double-shadow {
+    text-shadow: 5px 1px 10px #1b450e, 7px 3px 20px #ae982c;
+}
+
+.block-properties-desc {
+    font-family: LiberGrotesqueFamily, sans-serif;
+    padding: 20px;
+    text-align: justify;
+    width: 700px;
+    box-sizing: content-box;
+}
+
+.block-properties-desc .b-prop-desc-bold {
+    font-weight: 700;
+}
+
+.block-properties-desc .b-prop-desc-black {
+    font-weight: 900;
+}
+
+.block-properties-desc .b-prop-desc-obl {
+    font-style: oblique;
+}
+
+.block-properties-desc .b-prop-desc-bold-obl {
+    font-weight: 700;
+    font-style: oblique;
+}
+
+.top-page {
+    color: rgb(151,16,16);
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #194309;
+    font-weight: 700;
+}

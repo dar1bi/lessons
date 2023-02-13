@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Урок 5. CSS - Стилі шрифту та тексту. Властивості блоків</title>
+    </head>
+    <body>
+        <header>
+            <div class="top-header"  id="top">
+                <p>
+                    Програма курсу:
+                    <a href="https://edu.fls.guru" target="_blank">Фрілансер по життю</a>
+                </p>
+            </div>
+            <div class="navigation">
+                <h3>НАВІГАЦІЯ:</h3>
+                <ul>
+                    <li>
+                        <a href="#font-prop" title="Посилання до опису про CSS-властивості шрифтів">CSS-властивості шрифтів</a>
+                        <ul>
+                            <li><a href="#ff" title="Посилання до опису про font-family">font-family</a></li>
+                            <li><a href="#fz" title="Посилання до опису про font-size">font-size</a></li>
+                            <li><a href="#fs" title="Посилання до опису про font-style">font-style</a></li>
+                            <li><a href="#fw" title="Посилання до опису про font-weight">font-weight</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#text-prop" title="Посилання до опису про CSS-властивості тексту">CSS-властивості тексту</a>
+                        <ul>
+                            <li><a href="#col" title="Посилання до опису про color">color</a></li>
+                            <li><a href="#ta" title="Посилання до опису про text-align">text-align</a></li>
+                            <li><a href="#td" title="Посилання до опису про text-decoration">text-decoration</a></li>
+                            <li><a href="#ts" title="Посилання до опису про text-shadow">text-shadow</a></li>
+                            <li><a href="#tt" title="Посилання до опису про text-transform">text-transform</a></li>
+                            <li><a href="#lh" title="Посилання до опису про line-height">line-height</a></li>
+                            <li><a href="#ti" title="Посилання до опису про text-indent">text-indent</a></li>
+                            <li><a href="#ls" title="Посилання до опису про letter-spacing">letter-spacing</a></li>
+                            <li><a href="#whs" title="Посилання до опису про white-space">white-space</a></li>
+                            <li><a href="#ws" title="Посилання до опису про word-spacing">word-spacing</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#block-prop" title="Посилання до опису про CSS-властивості блоків">CSS-властивості блоків</a>
+                        <ul>
+                            <li><a href="#bs" title="Посилання до опису про box-sizing">box-sizing</a></li>
+                            <li><a href="#pp" title="Посилання до опису про padding">padding</a></li>
+                            <li><a href="#mm" title="Посилання до опису про margin">margin</a></li>
+                            <li><a href="#wid" title="Посилання до опису про width">width</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-title block">
+                <h1>CSS: Стилі шрифту та тексту. CSS-властивості блоків</h1>
+                <h2 class="subtitle">Конспект уроку №5 курсу "Фрілансер по життю"</h2>
+            </div>
+        </header>
+        <main>
+            <div class="font-properties block" id="font-prop">
+                <h3>CSS-властивості шрифтів</h3>
+                <div class="property" id="ff">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">font-family</span> - встановлює родину шрифту.
+                        </p>
+                        <p>
+                            Оскільки не всі шрифти доступні на всіх комп'ютерах (існують тисячі шрифтів і більшість з них не безкоштовні), CSS передбачає резервну систему. Першим ви вказуєте шрифт, який хотіли б використовувати. За ним йдуть будь-які шрифти, які ви могли б використовувати, якщо перший зазначений шрифт недоступний. А закінчити список ви повинні типовим шрифтом, який має <span class="underline">5 видів</span>:
+                        </p>
+                        <ul>
+                            <li><span>serif</span> — шрифт з зарубками (засічками)</li>
+                            <li><span>sans-serif</span> — рублений шрифт (без зарубок)</li>
+                            <li><span>cursive</span> — курсивні шрифти</li>
+                            <li><span>fantasy</span> — декоративні шрифти</li>
+                            <li><span>monospace</span> — моноширинні шрифти</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>font-family: "Ім'я шрифту", "Ім'я шрифту", тип шрифту;</p>
+                        <p>font-family: CircularStd, sans-serif;</p>
+                    </div>
+                </div>
+                <div class="property" id="fz">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">font-size</span> - встановлює розмір шрифту.
+                        </p>
+                        <p>
+                            Розмір шрифту - це висота від базової лінії літери до її верхнього краю. В якості значення можна вказати абсолютний або відносний розмір, довжину або відсоток. <span class="underline">За замовчуванням</span> становить <span class="underline">16px</span>, якщо в браузері не вказано іншого.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>font-size: цифрове-значення_одиниця-виміру;</p>
+                        <p>font-size: 20px;</p>
+                    </div>
+                </div>
+                <div class="property" id="fs">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">font-style</span> - встановлює стиль шрифту.
+                        </p>
+                        <p>
+                            Дана CSS властивість визначає стиль шрифту: звичайний, курсив або похилий. Коли для тексту встановлено курсивне або похиле накреслення, браузер звертається до системи для пошуку відповідного шрифту. Якщо заданий шрифт не знайдений, браузер використовує спеціальний алгоритм для імітації потрібного виду тексту.
+                        </p>
+                        <p>
+                            <span class="underline">Має наступні значення:</span>
+                        </p>
+                        <ul>
+                            <li><span>normal</span> — (за замовчуванням) звичайний (не змінений, стандартний) стиль</li>
+                            <li><span>italic</span> — курсив</li>
+                            <li><span>oblique</span> — нахилення літер</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>font-style: назва стилю;</p>
+                        <p>font-style: italic;</p>
+                    </div>
+                </div>
+                <div class="property" id="fw">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">font-weight</span> - встановлює насиченість (товщину) шрифту.
+                        </p>
+                        <p>
+                            Вага шрифтів, доступних вам, залежить від сімейства шрифтів, який ви використовуєте. Деякі шрифти мають обличчя символів лише для нормальної (normal) та жирної (bold) товщини. Для таких шрифтів жирність 100-500 є normal, а 600-900 - bold.
+                        </p>
+                        <p>
+                            <span class="underline">Можливі значення</span> (найпоширеніші):
+                        </p>
+                        <ul>
+                            <li><span>100</span> — thin</li>
+                            <li><span>300</span> — lite</li>
+                            <li><span>400</span> — regular (normal) (за замовчуванням)</li>
+                            <li><span>500</span> — medium</li>
+                            <li><span>600</span> — semibold</li>
+                            <li><span>700</span> — bold</li>
+                            <li><span>900</span> — black</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>font-weight: цифрове значення або значення словом (словесне);</p>
+                        <p>font-weight: 900;</p>
+                    </div>
+                </div>
+                <div class="top-page">
+                    <a href="#top" title="Піднятися наверх сторінки">Наверх ↑</a>
+                </div>
+            </div>
+            <div class="text-properties block" id="text-prop">
+                <h3>CSS-властивості тексту</h3>
+                <div class="property" id="col">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">color</span> - встановлює колір тексту.
+                        </p>
+                        <p>
+                            Ми можемо встановлювати колір для тексту, використовуючи <span class="underline">різні значення</span>:
+                        </p>
+                        <ul>
+                            <li class="color-word">gold</li>
+                            <li class="color-hex">#F12668</li>
+                            <li class="color-rgb">rgb(72, 102, 157)</li>
+                            <li class="color-rgba">rgba(72, 102, 157, 0.45)</li>
+                            <li class="color-hsl">hsl(0, 100%, 30%)</li>
+                            <li class="color-hsla">hsla(0, 60%, 77%, 0.7)</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>color: слово або код кольору;</p>
+                        <p>color: #1f7909;</p>
+                    </div>
+                </div>
+                <div class="property" id="ta">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">text-align</span> - встановлює вирівнювання тексту.
+                        </p>
+                        <p>
+                            Хоча назва властивості text-align, вона поширюється на весь вбудований вміст блочного контейнера. Тому це не просто вирівнювання тексту - властивість використовується для вирівнювання будь-якого вбудованого вмісту в елементі (якщо він не повністю заповнює контейнер блоку).
+                            Важливо зазначити, що будь-яке вирівнювання, вказане у text-align, не залежить від контейнеру. Блок тексту - це просто стек коробки рядків. Властивість text-align визначає, як кожен лінійний рівень в кожному рядку вирівнюється по відношенню до початкової та кінцевої сторін лінії.
+                        </p>
+                        <p><span class="underline">Можливі значення властивості:</span></p>
+                        <ul>
+                            <li><span>center</span> — вирівнює по центру</li>
+                            <li><span>left</span> — вирівнює по лівому краю</li>
+                            <li><span>right</span> — вирівнює по правому краю</li>
+                            <li><span>justify</span> — вирівнює текст по ширині об'єкту, в якому він знаходиться (автоматично змінюючи пробіли між словами)</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>text-align: значення;</p>
+                        <p>text-align: center;</p>
+                    </div>
+                </div>
+                <div class="property" id="td">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">text-decoration</span> - додає тексту певне оформлення.
+                        </p>
+                        <p>
+                            Одночасно дозволено застосовувати більш декілька стилів, перераховуючи значення через пропуск. Пропущені властивості отримають їх початкові значення.
+                        </p>
+                        <p><span class="underline">Значення властивості:</span></p>
+                        <ul>
+                            <li><span>line-through</span> — <span class="l-th">закреслює текст</span></li>
+                            <li><span>overline</span> — <span class="ov-l">лінія над текстом</span></li>
+                            <li><span>underline</span> — <span class="und-l">лінія під текстом</span></li>
+                            <li><span>none</span> — (за замовченням) відміняє змінений раніше параметр</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>text-decoration: значення;</p>
+                        <p>text-decoration: underline;</p>
+                    </div>
+                </div>
+                <div class="property" id="ts">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">text-shadow</span> - додає тексту тінь.
+                        </p>
+                        <p>
+                            Властивість text-shadow приймає, такі, <span class="underline">розділені пропусками, значення</span>:
+                        </p>
+                        <ul>
+                            <li><span>горизонтальне зміщення тіні</span></li>
+                            <li><span>вертикальне зміщення тіні</span></li>
+                            <li><span>радіус розмиття тіні</span></li>
+                            <li><span>колір тіні</span></li>
+                        </ul>
+                        <p class="p-top">
+                            Перші два значення - значення довжини, які визначають горизонтальне зміщення тіні та вертикальне зсув відповідно (це необхідні значення). Значення третьої довжини може бути визначено радіусом розмиття тіні (необов'язково). І значення кольору можна використовувати для визначення кольору тіні (необов'язково).
+                            <span class="double-shadow">Ви можете застосувати кілька тіньових ефектів в рамках одного визначення властивості, розділяючи кожен набір значень комою.</span> Кілька тіньових ефектів застосовуються в зазначеному порядку, і, таким чином, можуть накладатися один на одного, але вони ніколи не накладають сам текст.
+                            Коли дано більше однієї тіні, тіні розташовуються спереду до спини (найперші ближче до користувача, наступні всі далі). Тобто перша задана тінь показується зверху.
+                            Тіні тексту під текстом можуть відображатися, якщо він є частково прозорим. Також, тіні тексту не впливають на макет і не викликають прокручування чи збільшують розмір прокручуваної області.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>text-shadow: горизонтальне_зміщення вертикальне_зміщення розмір колір;</p>
+                        <p>text-shadow: 2px 2px 5px #000;</p>
+                    </div>
+                </div>
+                <div class="property" id="tt">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">text-transform</span> - встановлює тип (регістр) літер (малі або великі).
+                        </p>
+                        <p>
+                            Властивість text-transform визначає, якими літерами буде відображено текст - <span class="uppercase">великими</span>, <span class="lowercase">МАЛИМИ</span> або <span class="capitalize">кожне слово з великої літери</span>.
+                            Зверніть увагу, що значення uppercase i lowercase впливають на всі символи слів, а capitalize тільки для перших.
+                        </p>
+                        <p><span class="underline">Можливі значення властивості:</span></p>
+                        <ul>
+                            <li><span>capitalize</span> — кожне слово починається з великої літери</li>
+                            <li><span>lowercase</span> — усі літери малі (нижній регістр)</li>
+                            <li><span>uppercase</span> — усі літери великі (верхній регістр)</li>
+                            <li><span>none</span> — (за замовчуванням) не змінює (або скасовує) значення</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>text-transform: значення;</p>
+                        <p>text-transform: uppercase;</p>
+                    </div>
+                </div>
+                <div class="property" id="lh">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">line-height</span> - визначає міжрядковий інтервал (відстань) (висота рядка).
+                        </p>
+                        <p>
+                            За звичайних обставин відстань між рядками залежить від виду і розміру шрифту і визначається, браузером, автоматично.
+                            <span class="underline">Перевести пікселі в частини:</span>
+                            значення line-height поділити на значення font-size.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>line-height: значення;</p>
+                        <p>line-height: 1.2;</p>
+                    </div>
+                </div>
+                <div class="property" id="ti">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">text-indent</span> - встановлює відступ зліва у першого рядка тексту.
+                        </p>
+                        <p>
+                            Використовуючи властивість text-indent відступ розглядається як <span class="underline">маржа, застосована до початкового краю рядка</span>. Вона впливає лише на лінії, які є першими форматованими лініями елемента (якщо інше не вказано за допомогою ключових слів each-line та / або hanging).
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>text-indent: значення;</p>
+                        <p>text-indent: 20px;</p>
+                    </div>
+                </div>
+                <div class="property" id="ls">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">letter-spacing</span> - встановлює інтервал між літерами (символами).
+                        </p>
+                        <p>
+                            Браузери зазвичай встановлюють відстань між символами, виходячи з типу і виду шрифту, його розмірів і налаштувань операційної системи.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>letter-spacing: значення;</p>
+                        <p>letter-spacing: 7px;</p>
+                    </div>
+                </div>
+                <div class="property" id="whs">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">white-space</span> - управляє поведінкою пробілів між словами.
+                        </p>
+                        <p><span class="underline">Можливі значення властивості:</span></p>
+                        <ul>
+                            <li><span>nowrap</span> — забороняє переніс рядка</li>
+                            <li><span>normal</span> — (за замовчуванням) не змінює (або скасовує) значення</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>white-space: значення;</p>
+                        <p>white-space: nowrap;</p>
+                    </div>
+                </div>
+                <div class="property" id="ws">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">word-spacing</span> - встановлює інтервал між словами.
+                        </p>
+                        <p>
+                            Робота word-spacing полягає у визначенні додаткового простору між кожним словом. Наприклад, значення 0 не має ефекту (застосовується нормальний інтервал). <span class="underline">Позитивні значення збільшують</span> інтервал і <span class="underline">негативні значення зменшують</span> відстань.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>word-spacing: значення;</p>
+                        <p>word-spacing: 20px;</p>
+                    </div>
+                </div>
+                <div class="top-page">
+                    <a href="#top" title="Піднятися наверх сторінки">Наверх ↑</a>
+                </div>
+            </div>
+            <div class="block-properties block" id="block-prop">
+                <h3>CSS-властивості блоків</h3>
+                <div class="block-properties-desc">
+                    <p>
+                        A block on a webpage is an <span class="b-prop-desc-black">HTML element</span> that appears on a new line, i.e. underneath the preceding element in a horizontal writing mode, and above the following element <span class="b-prop-desc-bold-obl">(commonly known as a block-level element)</span>. For example, <span class="b-prop-desc-bold">&lt;p&gt;</span> is by default a block-level element, whereas <span class="b-prop-desc-bold">&lt;a&gt;</span> is an inline element — <span class="b-prop-desc-obl">you can put several links next to one another in your HTML source and they will sit on the same line as one another in the rendered output</span>.
+                    </p>
+                </div>
+                <div class="property" id="bs">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">box-sizing</span> - застосовується для зміни алгоритму обчислення величин.
+                        </p>
+                        <p>
+                            Без задання, коли ви вказуєте ширину блоку (width), браузер розраховує її без врахування меж (border) та внутрішніх відступів (padding), вказавши border-box у якості значення властивості box-sizing, браузер почне враховувати кордони та відступи у формуванні ширини та висоти блоку.
+                        </p>
+                        <p>
+                            Типовий алгоритм за замовчуванням використовує content-box, а це означає, що будь-які розміри, які ви надаєте, використовуються лише для визначення розміру вікна вмісту - будь-які поля і межі виводяться за межами вікна вмісту. Тому, застосовуючи ширину 200 пікселів та поле 10 пікселів до елемента, елемент буде займати загальну ширину 220 пікселів (припускаючи, що повзунок додається до всіх чотирьох сторін або, принаймні, з лівого та правого боку). Це відбувається тому що підкладка додана до ширини вікна.
+                        </p>
+                        <p>
+                            Ви можете використовувати значення border-box, щоб змінити це, так що будь-які поля та межі будуть включені в розміри висоти та ширини елемента. У цьому випадку елемент буде займати лише 200 пікселів, тому що заповнення додано до внутрішньої частини елемента.
+                        </p>
+                        <p>
+                            Ця властивість особливо важлива для створення адаптивного дизайну.
+                        </p>
+                        <p>
+                            Отже, <span class="underline">можливі значення</span>:
+                        </p>
+                        <ul>
+                            <li><span>content-box</span> — (за замовчуванням) додає відступи до розміру об'єкту</li>
+                            <li><span>border-box</span> — значення розмірів враховують відступи</li>
+                        </ul>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>box-sizing: значення;</p>
+                        <p>box-sizing: border-box;</p>
+                    </div>
+                </div>
+                <div class="property" id="pp">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">padding</span> - внутрішній відступ.
+                        </p>
+                        <p>
+                            Властивість padding - задає відступ навколо вмісту елемента (тобто, задає відстань між кордоном елемента та уявним прямокутником, котрий обмежує текст).
+                        </p>
+                        <p>
+                            Відступи ВСЕРЕДИНІ об'єкту. 
+                            Від кордонів об'єкту ДО ЙОГО КОНТЕНТУ.
+                            НЕ успадковується.
+                        </p>
+                        <p>
+                            При вказанні значення у відсотках - <span class="underline">відсоток береться від ширини батьківського об'єкту</span>, навіть для горизонтальних відступів.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>padding: з_усіх_сторін;</p>
+                        <p>padding: зверху_знизу зправа_зліва;</p>
+                        <p>padding: зверху зправа_зліва знизу;</p>
+                        <p>padding: зверху зправа знизу зліва;</p>
+                        <p class="p-top">padding-top: значення;</p>
+                        <p>padding-right: значення;</p>
+                        <p>padding-bottom: значення;</p>
+                        <p>padding-left: значення;</p>
+                    </div>
+                </div>
+                <div class="property" id="mm">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">margin</span> - зовнішній відступ.
+                        </p>
+                        <p>
+                            Властивість margin - встановлює зовнішні відступи (поля) навколо елемента. Таким відступом є простір від грані поточного елемента до внутрішнього краю його батьківського елемента.
+                        </p>
+                        <p>
+                            Відступи ЗОВНІ об'єкту. 
+                            Від кордонів об'єкту ДО ІНШОГО ОБ'ЄКТУ.
+                            НЕ успадковується.
+                        </p>
+                        <p>
+                            <span class="underline">Значення можуть бути від'ємними!</span>
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>margin: з_усіх_сторін;</p>
+                        <p>margin: зверху_знизу справа_зліва;</p>
+                        <p>margin: зверху справа_зліва знизу;</p>
+                        <p>margin: зверху справа знизу зліва;</p>
+                        <p class="p-top">margin-top: значення;</p>
+                        <p>margin-right: значення;</p>
+                        <p>margin-bottom: значення;</p>
+                        <p>margin-left: значення;</p>
+                    </div>
+                </div>
+                <div class="property" id="wid">
+                    <div class="description">
+                        <p class="property-name">
+                            <span class="name">width</span> - чітко задає ширину блочного (блочно-рядкового) об'єкту.
+                        </p>
+                        <p>
+                            <span class="underline">НЕ працює із рядковими об'єктами.</span> auto - (за замовченням) автоматичний розмір.
+                        </p>
+                        <p>
+                            Якщо використовувати відсотки (%) для задання ширини, треба пам'ятати, що відсоток базується на батьківському елементі, тобто ширині контейнера. Якщо батьківський елемент має встановлені 480 пікселів в якості ширини - , то процент буде залежати саме від цього значення. Отже, наприклад нащадок з 50% ширини, матиме насправді 50% від 480 пікселів, тобто 240 пікселів.
+                        </p>
+                        <p>
+                            Ключові слова впливають на розрахунок ширини й висоти елементу(й не залежать від значення властивості box-sizing). Це не стосується до значень у одиницях довжини або процентах.
+                        </p>
+                    </div>
+                    <div class="example">
+                        <h4>Приклад:</h4>
+                        <p>width: значення;</p>
+                        <p>width: 200px;</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="top-page">
+                    <a href="#top" title="Піднятися наверх сторінки">Наверх ↑</a>
+                </div>
+                <p>
+                    "Живи, а працюй у вільний час!" - <a href="https://www.youtube.com/c/FreelancerLifeStyle" target="_blank">Жека Андріканич</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
